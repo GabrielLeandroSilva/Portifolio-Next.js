@@ -51,7 +51,7 @@ export default function Hero() {
             </div>
 
             <a href="#sobre" aria-label="Scroll para conteúdo" className="
-                absolute bottom-10
+                absolute bottom-20
                 left-1/2 -translate-x-1/2
                 opacity-60
                 px-2 py-2

@@ -19,7 +19,7 @@ export default function InfoCard({
           hover:bg-black/5 dark:hover:bg-white/5
         "
       >
-        <h3 className="font-medium text-lg text-primary">
+        <h3 className="font-medium text-lg text-primary dark:text-white">
           {title}
         </h3>
   

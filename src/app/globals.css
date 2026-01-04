@@ -26,6 +26,10 @@ html {
   width: calc(var(--spacing) * 30);
 }
 
+.bottom-20 {
+  bottom: calc(var(--spacing) * 20);
+}
+
 .gradient-text {
   background-size: 300% 300%;
   animation: gradient-move 6s ease infinite;
