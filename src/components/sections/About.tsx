@@ -20,7 +20,7 @@ export default function About() {
     return (
         <section id="sobre" className="
         py-24 px-6
-        bg-white dark:bg-black
+        bg-white dark:bg-gray-900
         text-black dark:text-white
         transition-colors"
         >

@@ -1,32 +1,36 @@
-import FadeIn from "../ui/FadeIn"
-import ProjectCard from "../ProjectCard"
+"use client"
 
-const projects = [
-    {
-        title: "Projeto Exemplo 01",
-        description:
-            "Aplicação front-end desenvolvida para demonstrar organização de componentes e UI moderna.",
-        tags: ["React", "Next.js", "Tailwind"],
-    },
-    {
-        title: "Projeto Exemplo 02",
-        description:
-            "Landing page responsiva com foco em performance e experiência do usuário.",
-        tags: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-        title: "Projeto Exemplo 03",
-        description:
-            "Dashboard fictício com layout modular e boas práticas de componentização.",
-        tags: ["TypeScript", "React"],
-    },
-]
+import FadeIn from "../ui/FadeIn"
+
+import { projects } from "@/src/data/projects"
+import { useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { Select } from "../ui/Select"
+import { ProjectCard } from "../ProjectCard"
 
 export default function Projects() {
+
+    const [selectedTag, setSelectedTag] = useState("Todos")
+
+    // 🔹 Extrai todas as tags sem repetir
+    const tags = useMemo(() => {
+        const allTags = projects.flatMap(project => project.tags)
+        return ["Todos", ...Array.from(new Set(allTags))]
+    }, [])
+
+    // 🔹 Filtra os projetos
+    const filteredProjects = useMemo(() => {
+        if (selectedTag === "Todos") return projects
+
+        return projects.filter(project =>
+            project.tags.includes(selectedTag)
+        )
+    }, [selectedTag])
+
     return (
         <section id="projetos" className="
         py-24 px-6
-        bg-white dark:bg-black
+        bg-white dark:bg-gray-900
         text-black dark:text-white
         transition-colors">
             <div className="max-w-6xl mx-auto">
@@ -46,15 +50,32 @@ export default function Projects() {
                     </p>
                 </FadeIn>
 
-                <div className="
-                mt-16 grid gap-6
-                sm:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((project, index) => (
-                        <FadeIn key={project.title} delay={0.2 + index * 0.1}>
-                            <ProjectCard title={project.title} description={project.description} tags={project.tags} />
-                        </FadeIn>
-                    ))}
+                <div className="mb-8 mt-4 flex justify-end">
+                    <Select
+                        value={selectedTag}
+                        options={tags}
+                        onChange={setSelectedTag}
+                    />
+
                 </div>
+
+
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={selectedTag}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -12 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                    >
+                        {filteredProjects.map(project => (
+                            <ProjectCard key={project.id} project={project} />
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
+
+
             </div>
         </section>
     )

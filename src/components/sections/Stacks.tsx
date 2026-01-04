@@ -9,14 +9,14 @@ const stacks = [
     'React',
     'Next.js',
     'Tailwind CSS',
-    'Git',
+    'Figma',
 ]
 
 export default function Stacks() {
     return (
         <section id="stacks" className="
             py-24 px-6
-            bg-white dark:bg-black
+            bg-white dark:bg-gray-900
             text-black dark:text-white
             transition-colors">
             <div className="max-w-5xl mx-auto">

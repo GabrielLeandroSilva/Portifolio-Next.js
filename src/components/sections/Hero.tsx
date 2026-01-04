@@ -10,7 +10,7 @@ export default function Hero() {
             min-h-screen
             flex items-center justify-center
             px-6
-            bg-white dark:bg-black
+            bg-white dark:bg-gray-900
             text-black dark:text-white
             transition-colors
         ">

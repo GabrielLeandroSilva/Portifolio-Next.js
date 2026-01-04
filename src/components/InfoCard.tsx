@@ -12,6 +12,8 @@ export default function InfoCard({
         className="
           p-6 rounded-xl
           shadow-sm
+          bg-white text-black
+          dark:bg-zinc-900 dark:text-white
           border border-black/10 dark:border-white/10
           hover:border-black/30 dark:hover:border-white/30
           hover:bg-black/5 dark:hover:bg-white/5
