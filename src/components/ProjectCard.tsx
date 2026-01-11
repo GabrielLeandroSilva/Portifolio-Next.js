@@ -11,7 +11,7 @@ export function ProjectCard({ project }: Props) {
     const CardContent = (
         <div
             className={clsx(
-                "rounded-xl p-6 bg-white text-black dark:bg-zinc-900 dark:text-white border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5",
+                "rounded-xl p-6 bg-white text-black dark:bg-zinc-900 dark:text-white border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5 transition",
                 project.url
                     ? "cursor-pointer"
                     : "cursor-default"

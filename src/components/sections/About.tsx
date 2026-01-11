@@ -19,8 +19,7 @@ const cards = [
 export default function About() {
     return (
         <section id="sobre" className="
-        py-24 px-6
-        bg-white dark:bg-gray-900
+        py-10 px-6
         text-black dark:text-white
         transition-colors"
         >

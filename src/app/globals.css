@@ -18,6 +18,16 @@
   --color-primary: var(--color-blue-500);
 }
 
+:root {
+  --background-from-color: var(--color-blue-50);
+  --background-to-color: var(--color-blue-100);
+}
+
+.dark {
+  --background-from-color: var(--color-gray-900);
+  --background-to-color: var(--color-gray-950);
+}
+
 html {
   scroll-behavior: smooth;
 }

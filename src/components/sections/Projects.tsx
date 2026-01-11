@@ -29,8 +29,7 @@ export default function Projects() {
 
     return (
         <section id="projetos" className="
-        py-24 px-6
-        bg-white dark:bg-gray-900
+        py-10 px-6
         text-black dark:text-white
         transition-colors">
             <div className="max-w-6xl mx-auto">

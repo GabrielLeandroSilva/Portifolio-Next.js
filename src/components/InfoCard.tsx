@@ -17,6 +17,7 @@ export default function InfoCard({
           border border-black/10 dark:border-white/10
           hover:border-black/30 dark:hover:border-white/30
           hover:bg-black/5 dark:hover:bg-white/5
+          transition
         "
       >
         <h3 className="font-medium text-lg text-primary dark:text-white">

@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-900 transition-colors">
+      <body className="
+            bg-radial from-[var(--background-from-color)] from-40%
+            to-[var(--background-to-color)]">
         <ThemeProviders>
           {children}
         </ThemeProviders>
