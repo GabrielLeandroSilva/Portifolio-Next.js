@@ -72,13 +72,21 @@ src/
 │  │  ├─ Projects.tsx
 │  │  ├─ Contact.tsx
 │  │  └─ Footer.tsx
-│
+│  │
+│  ├─ providers/
+│  │  └─ theme-provider.tsx
+│  | 
+|  └─ cards/
+│     ├─ InfoCard.tsx
+│     ├─ ProjectCard.tsx
+│     └─ TechCard.tsx
+|
 ├─ assets/
 │  └─ images/
 │     └─ profile.jpg
 │
-└─ lib/
-   └─ utils.ts
+└─ data/
+   └─ projects.ts
 ```
 
 ---
@@ -105,11 +113,11 @@ Acesse em: **[http://localhost:3000](http://localhost:3000)**
 
 ## 📈 Próximos passos
 
-* [ ] Adicionar projetos reais
-* [ ] SEO e Open Graph
-* [ ] Testes de performance (Lighthouse)
-* [ ] Deploy na Vercel
-* [ ] Formulário de contato funcional
+* [v] Adicionar projetos reais
+* [v] SEO
+* [v] Testes de performance (Lighthouse)
+* [v] Deploy na Vercel
+* [v] Formulário de contato funcional
 
 ---
 
