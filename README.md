@@ -10,7 +10,7 @@ Este projeto foi pensado para apresentar quem eu sou, minhas habilidades e proje
 
 > Portfólio moderno com Dark/Light mode, animações on-scroll e layout responsivo.
 
-*(Deploy em breve)*
+🔗 Acesse o projeto: https://portifolio-next-js-five.vercel.app/*
 
 ---
 
