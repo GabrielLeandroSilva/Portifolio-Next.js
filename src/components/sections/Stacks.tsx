@@ -15,7 +15,7 @@ const stacks = [
 export default function Stacks() {
     return (
         <section id="stacks" className="
-            py-10 px-6
+            py-10 px-6 md:py-32
             text-black dark:text-white
             transition-colors">
             <div className="max-w-5xl mx-auto">

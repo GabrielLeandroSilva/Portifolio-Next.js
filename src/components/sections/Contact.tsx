@@ -4,7 +4,7 @@ import FadeIn from "../ui/FadeIn";
 export default function Contact() {
     return (
         <section id="contato" className="
-            py-10 px-6
+            py-10 px-6 md:py-32
             text-black dark:text-white
             transition-colors">
             <div className="max-w-3xl mx-auto text-center">
