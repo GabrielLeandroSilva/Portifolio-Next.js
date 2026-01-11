@@ -1,5 +1,5 @@
 import FadeIn from "../ui/FadeIn";
-import InfoCard from "../InfoCard";
+import InfoCard from "../cards/InfoCard";
 
 const cards = [
     {

@@ -6,7 +6,7 @@ import { projects } from "@/src/data/projects"
 import { useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Select } from "../ui/Select"
-import { ProjectCard } from "../ProjectCard"
+import { ProjectCard } from "../cards/ProjectCard"
 
 export default function Projects() {
 

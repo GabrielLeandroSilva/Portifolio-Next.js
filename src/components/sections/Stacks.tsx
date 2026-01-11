@@ -1,5 +1,5 @@
 import FadeIn from "../ui/FadeIn"
-import TechCard from "../TechCard"
+import TechCard from "../cards/TechCard"
 
 const stacks = [
     'HTML',

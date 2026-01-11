@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProviders } from "@/src/components/theme-provider";
+import { ThemeProviders } from "@/src/components/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "Portifolio",
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className="
-            bg-radial from-[var(--background-from-color)] from-40%
+            bg-radial bg-fixed from-[var(--background-from-color)] from-40%
             to-[var(--background-to-color)]">
         <ThemeProviders>
           {children}
