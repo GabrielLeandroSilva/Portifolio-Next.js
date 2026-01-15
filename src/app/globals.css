@@ -36,8 +36,8 @@ html {
   width: calc(var(--spacing) * 30);
 }
 
-.bottom-20 {
-  bottom: calc(var(--spacing) * 20);
+.bottom-rem {
+  bottom: 1rem;
 }
 
 .gradient-text {
