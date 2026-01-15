@@ -36,16 +36,6 @@ html {
   width: calc(var(--spacing) * 30);
 }
 
-.bottom-rem {
-  bottom: 1rem;
-}
-
-@media (max-width: 500px) {
-  .bottom-rem {
-    bottom: calc(var(--spacing) * 20);
-  }
-}
-
 .gradient-text {
   background-size: 300% 300%;
   animation: gradient-move 6s ease infinite;
