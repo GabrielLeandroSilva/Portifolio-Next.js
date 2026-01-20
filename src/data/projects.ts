@@ -29,4 +29,10 @@ export const projects: Project[] = [
             "Chatbot de resumo de curriculos com API integrada. (desenvolvimento)",
         tags: ["TypeScript", "React", "Figma"],
     },
+    {
+        id: 4,
+        title: 'AnotaSim',
+        description: 'AnotaSim é um aplicativo simples, rápido e moderno para organizar tarefas do dia a dia.',
+        tags: ["TypeScript", "Next.js", "Tailwind", "PWA"]
+    }
 ]
