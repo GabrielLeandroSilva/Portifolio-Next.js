@@ -24,10 +24,11 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Projeto Figma Resume AI",
+        title: "Projeto Resume AI",
         description:
-            "Chatbot de resumo de curriculos com API integrada. (desenvolvimento)",
-        tags: ["TypeScript", "React", "Figma"],
+            "Chatbot de resumo de curriculos com API integrada.",
+        tags: ["TypeScript", "React", "Next.js", "Chat"],
+        url: "https://resume-ai-seven-flame.vercel.app/",
     },
     {
         id: 4,
