@@ -36,5 +36,12 @@ export const projects: Project[] = [
         description: 'AnotaSim é um aplicativo simples, rápido e moderno para organizar tarefas do dia a dia.',
         tags: ["TypeScript", "Next.js", "Tailwind", "PWA"],
         url: "https://anotasim.vercel.app/",
+    },
+    {
+        id: 5,
+        title: 'ConsultaSim',
+        description: 'Controle seus gastos no supermercado em tempo real.',
+        tags: ["TypeScript", "Next.js", "Tailwind", "PWA", "Prisma", "Zustand"],
+        url: "https://consulta-sim.vercel.app/",
     }
 ]
