@@ -1,24 +1,40 @@
+import { contact } from "@/src/data/projects"
+
+const links = [
+  { label: "GitHub", href: contact.github },
+  { label: "LinkedIn", href: contact.linkedin },
+  { label: "E-mail", href: `mailto:${contact.email}` },
+]
+
 export default function Footer() {
-    return (
-        <footer className="
-        py-10 px-6
-        bg-white dark:bg-black
-        text-black dark:text-white
-        border-t border-black/10 dark:border-white/10">
-            <div className="
-            max-w-6xl mx-auto
-            flex flex-col sm:flex-row
-            items-center justify-center
-            gap-4
-            text-sm
-            opacity-70">
-                <span>
-                    © {new Date().getFullYear()} Desenvolvedor Front-End
-                </span>
-                <a href="https://www.linkedin.com/in/gleandro0795/" target="_blank" className="hover:underline">
-                Gabriel Leandro 
-                </a>
-            </div>
-        </footer>
-    )
+  return (
+    <footer className="px-6 pb-8 pt-[18vh]">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-2 text-small md:grid-cols-3 md:items-baseline">
+        <p className="text-muted">Portfólio de Gabriel Leandro</p>
+
+        <nav
+          className="flex flex-wrap gap-6 md:justify-self-center"
+          aria-label="Links"
+        >
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                link.href.startsWith("http") ? "noopener noreferrer" : undefined
+              }
+              className="text-ink transition-opacity hover:opacity-70"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <p className="text-muted md:justify-self-end">
+          © {new Date().getFullYear()}
+        </p>
+      </div>
+    </footer>
+  )
 }

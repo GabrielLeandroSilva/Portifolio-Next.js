@@ -1,13 +1,43 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProviders } from "@/src/components/providers/theme-provider";
 
+const imbue = localFont({
+  src: "../fonts/imbue-400.woff2",
+  weight: "400",
+  variable: "--font-imbue",
+  display: "swap",
+});
+
+const albert = localFont({
+  src: "../fonts/albert-sans-var.woff2",
+  weight: "100 900",
+  variable: "--font-albert",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Portifolio",
-  description: "Aplicação para exibição de projetos",
+    title: "Gabriel Leandro, front-end e sistemas",
+  description:
+    "Portfólio de Gabriel Leandro, desenvolvedor front-end e analista de sistemas. Cinco projetos publicados, com interface, código e links no ar.",
   icons: {
     icon: "/favicon.ico",
-  }
+  },
+  openGraph: {
+  title: "Gabriel Leandro, front-end e sistemas",
+    description:
+      "Cinco projetos publicados, de um escritório de advocacia a um controle de gastos de mercado.",
+    locale: "pt_BR",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#e9e7e0" },
+    { media: "(prefers-color-scheme: dark)", color: "#1c1c1c" },
+  ],
 };
 
 export default function RootLayout({
@@ -16,13 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body className="
-            bg-radial bg-fixed from-[var(--background-from-color)] from-40%
-            to-[var(--background-to-color)]">
-        <ThemeProviders>
-          {children}
-        </ThemeProviders>
+    <html
+      lang="pt-BR"
+      suppressHydrationWarning
+      className={`${imbue.variable} ${albert.variable}`}
+    >
+      <body className="bg-bg text-ink antialiased">
+        <ThemeProviders>{children}</ThemeProviders>
       </body>
     </html>
   );

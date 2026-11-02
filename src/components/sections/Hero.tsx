@@ -1,67 +1,72 @@
-import { ArrowDown } from "lucide-react";
-import FadeIn from "../ui/FadeIn";
-import Image from "next/image";
-import Typewriter from "../ui/Typewriter";
+﻿import Image from "next/image"
+import CoverNav from "../layout/CoverNav"
+
+const facts = [
+  { label: "Função", value: "Front-end e sistemas" },
+  { label: "No ar", value: "5 projetos" },
+  { label: "Base", value: "Brasil" },
+]
 
 export default function Hero() {
-    return (
-        <section className="
-            relative
-            min-h-screen
-            flex items-center justify-center
-            px-6
-            text-black dark:text-white
-            transition-colors
-        ">
-            <div className="text-center flex flex-col items-center">
-                <FadeIn>
-                    <div className="
-                    mb-6
-                    rounded-full
-                    border border-black/10 dark:border-white/10
-                    overflow-hidden
-                    hover:scale-105 transition
-                    w-60 h-60 sm:w-50 sm:h-50">
-                        <Image src="/profile.webp"
-                            alt="Foto de perfil de Gabriel Leandro"
-                            width={400}
-                            height={400}
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
-                </FadeIn>
+  return (
+    <section
+      id="top"
+      aria-label="Apresentação"
+      className="cover flex min-h-svh flex-col px-6"
+    >
+      <CoverNav />
 
-                <FadeIn>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 animate-gradient bg-clip-text text-transparent">
-                        Gabriel Leandro
-                    </h1>
-                </FadeIn>
-                <FadeIn delay={0.2}>
-                    <p className="mt-4 text-base opacity-70 h-6">
-                        <Typewriter
-                            texts={[
-                                "Desenvolvedor Front End",
-                                "Analista de Sistemas"
-                            ]}
-                        />
-                    </p>
-                </FadeIn>
-            </div>
+      <div className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col">
+        <h1 className="mt-[6vh] font-display text-display uppercase">
+          Gabriel Leandro
+        </h1>
 
-            <a href="#sobre" aria-label="Scroll para conteúdo" className="
-                absolute bottom-[1rem] max-md:bottom-20
-                left-1/2 -translate-x-1/2
-                opacity-60
-                px-2 py-2
-                border
-                rounded-xl
-                hover:opacity-100
-                transition
-                animate-bounce
-            ">
-                <ArrowDown size={28} />
-            </a>
-        </section>
-    )
+        <div className="grid flex-1 grid-cols-12 content-center items-center gap-x-6 gap-y-8 py-6 md:py-10">
+          <div className="col-span-12 max-w-[560px] md:col-span-6">
+            <p className="font-display text-lead uppercase">
+              Desenvolvedor front-end e analista de sistemas.
+            </p>
+            <p className="mt-5 max-w-[52ch] text-body">
+              Construo interfaces que vão ao ar e continuam funcionando. Do
+              primeiro componente à conta do usuário.
+            </p>
+            <p className="mt-3 max-w-[52ch] text-body">
+              Trabalho entre o desenho da tela e a regra do sistema:
+              componente, estado, banco, deploy.
+            </p>
+          </div>
+
+          <div className="col-span-12 ml-auto w-[120px] shrink-0 md:col-span-3 md:col-start-9 md:ml-0 md:w-full md:max-w-[240px]">
+            <Image
+              src="/profile.webp"
+              alt="Retrato de Gabriel Leandro"
+              width={400}
+              height={400}
+              priority
+              sizes="(min-width: 768px) 240px, 120px"
+              className="aspect-square w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6 pb-8 md:flex-row md:items-end md:justify-between">
+          <dl className="grid grid-cols-3 gap-6 text-small md:flex md:gap-10">
+            {facts.map((fact) => (
+              <div key={fact.label}>
+                <dt className="text-muted">{fact.label}</dt>
+                <dd className="text-ink">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <a
+            href="#trabalho"
+            className="inline-flex h-11 w-full items-center justify-center bg-accent px-6 text-small font-medium text-accent-ink transition-opacity hover:opacity-90 md:w-auto"
+          >
+            Ver os projetos
+          </a>
+        </div>
+      </div>
+    </section>
+  )
 }

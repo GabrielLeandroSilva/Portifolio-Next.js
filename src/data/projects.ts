@@ -4,44 +4,66 @@ export type Project = {
     description: string
     tags: string[]
     url?: string
+    screenshot: string
+    focus?: string
 }
 
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Portifolio Next.js",
+        title: "Bruna Nicoli Furtado",
         description:
-            "Aplicação front-end desenvolvida para demonstrar organização de componentes e UI moderna.",
-        tags: ["React", "Next.js", "Tailwind"],
+            "Landing page para um escritório de advocacia, com foco em clareza e contato direto.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        url: "https://nicolifurtado.adv.br",
+        screenshot: "/work/nicoli.webp",
+        focus: "76% 50%",
     },
     {
         id: 2,
-        title: "Site Advogada Nicoli",
+        title: "Resume AI",
         description:
-            "Landing page responsiva com foco em performance e experiência do usuário.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        url: "https://nicolifurtado.adv.br",
+            "Análise de currículos com IA: texto colado ou PDF, leitura estruturada e histórico.",
+        tags: ["TypeScript", "React", "Next.js", "Chat"],
+        url: "https://resume-ai-seven-flame.vercel.app/",
+        screenshot: "/work/resumeai.webp",
+        focus: "30% 45%",
     },
     {
         id: 3,
-        title: "Projeto Resume AI",
+        title: "AnotaSim",
         description:
-            "Chatbot de resumo de curriculos com API integrada.",
-        tags: ["TypeScript", "React", "Next.js", "Chat"],
-        url: "https://resume-ai-seven-flame.vercel.app/",
+            "PWA de tarefas com categorias, datas e funcionamento offline.",
+        tags: ["TypeScript", "Next.js", "Tailwind CSS", "PWA"],
+        url: "https://anota-sim.vercel.app/",
+        screenshot: "/work/anotasim.webp",
+        focus: "50% 30%",
     },
     {
         id: 4,
-        title: 'AnotaSim',
-        description: 'AnotaSim é um aplicativo simples, rápido e moderno para organizar tarefas do dia a dia.',
-        tags: ["TypeScript", "Next.js", "Tailwind", "PWA"],
-        url: "https://anotasim.vercel.app/",
+        title: "ConsultaSim",
+        description:
+            "Controle de gastos do mercado em tempo real, com login e dados por conta.",
+        tags: ["TypeScript", "Next.js", "Tailwind CSS", "PWA", "Prisma", "Zustand"],
+        url: "https://consulta-sim.vercel.app/",
+        screenshot: "/work/consultasim.webp",
+        focus: "50% 50%",
     },
     {
         id: 5,
-        title: 'ConsultaSim',
-        description: 'Controle seus gastos no supermercado em tempo real.',
-        tags: ["TypeScript", "Next.js", "Tailwind", "PWA", "Prisma", "Zustand"],
-        url: "https://consulta-sim.vercel.app/",
-    }
+        title: "Este portfólio",
+        description:
+            "O site que você está lendo: tipografia própria, dois temas e nenhum componente de catálogo.",
+        tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+        screenshot: "/work/portfolio.webp",
+        focus: "50% 50%",
+    },
 ]
+
+export const contact = {
+    email: "gleandro0795@gmail.com",
+    whatsapp: "+55 15 99184-2194",
+    whatsappUrl: "https://wa.me/5515991842194",
+    github: "https://github.com/GabrielLeandroSilva",
+    linkedin: "https://www.linkedin.com/in/gleandro0795/",
+}
