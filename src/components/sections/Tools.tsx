@@ -12,9 +12,9 @@ const tools = [
   "Tailwind CSS",
   "JavaScript",
   "PWA",
-  "Prisma",
-  "Zustand",
-  "HTML",
+  "VS Code",
+  "Node.js",
+  "OpenAPI",
 ]
 
 const toolData = tools.map((name) => {

@@ -10,6 +10,7 @@ const placements = [
   "w-[82%] md:ml-[12%] md:w-[58%]",
   "ml-auto w-[72%] md:ml-0 md:w-[40%] md:self-end",
   "w-full md:w-[50%] md:self-start",
+  "w-[82%] md:ml-[12%] md:w-[58%]",
 ]
 
 const ratios = [
@@ -18,6 +19,7 @@ const ratios = [
   "aspect-[3/2]",
   "aspect-[4/5]",
   "aspect-[3/2]",
+  "aspect-[16/9]",
 ]
 
 export default function Work() {
@@ -104,6 +106,17 @@ export default function Work() {
                       <ArrowUpRight size={14} />
                     </a>
                   )}
+                  {project.repo && (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-ink underline underline-offset-4 transition-colors hover:text-accent"
+                    >
+                      GitHub
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
                 </div>
               </Reveal>
             </article>
@@ -111,8 +124,9 @@ export default function Work() {
             {index === 1 && (
               <Reveal className="md:ml-[8%] md:w-[44%]">
                 <p className="text-lead text-ink">
-                  Jurídico, recrutamento, rotina, mercado e este site: cinco
-                  contextos, uma mesma disciplina de interface.
+                  Jurídico, recrutamento, rotina, mercado, ferramentas de
+                  desenvolvimento e este site: seis contextos, uma mesma
+                  disciplina de interface.
                 </p>
               </Reveal>
             )}

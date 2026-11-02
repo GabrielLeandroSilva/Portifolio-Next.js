@@ -4,6 +4,7 @@ export type Project = {
     description: string
     tags: string[]
     url?: string
+    repo?: string
     screenshot: string
     focus?: string
 }
@@ -56,6 +57,17 @@ export const projects: Project[] = [
             "O site que você está lendo: tipografia própria, dois temas e nenhum componente de catálogo.",
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
         screenshot: "/work/portfolio.webp",
+        focus: "50% 50%",
+    },
+    {
+        id: 6,
+        title: "DevMock",
+        description:
+            "Contrato de API e mock local no VS Code: schema, dados realistas, cenários de erro e tipos TypeScript.",
+        tags: ["TypeScript", "VS Code", "Node.js", "OpenAPI"],
+        url: "https://marketplace.visualstudio.com/items?itemName=devmock.devmock-vscode",
+        repo: "https://github.com/GabrielLeandroSilva/Devmock",
+        screenshot: "/work/devmock.webp",
         focus: "50% 50%",
     },
 ]

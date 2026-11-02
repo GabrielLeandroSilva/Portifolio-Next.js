@@ -20,14 +20,14 @@ const albert = localFont({
 export const metadata: Metadata = {
     title: "Gabriel Leandro, front-end e sistemas",
   description:
-    "Portfólio de Gabriel Leandro, desenvolvedor front-end e analista de sistemas. Cinco projetos publicados, com interface, código e links no ar.",
+    "Portfólio de Gabriel Leandro, desenvolvedor front-end e analista de sistemas. Seis projetos, com interface, código e links no ar.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
   title: "Gabriel Leandro, front-end e sistemas",
     description:
-      "Cinco projetos publicados, de um escritório de advocacia a um controle de gastos de mercado.",
+      "Seis projetos, de um escritório de advocacia a ferramentas de desenvolvimento.",
     locale: "pt_BR",
     type: "website",
   },

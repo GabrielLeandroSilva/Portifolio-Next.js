@@ -3,7 +3,7 @@ import CoverNav from "../layout/CoverNav"
 
 const facts = [
   { label: "Função", value: "Front-end e sistemas" },
-  { label: "No ar", value: "5 projetos" },
+  { label: "No ar", value: "6 projetos" },
   { label: "Base", value: "Brasil" },
 ]
 
